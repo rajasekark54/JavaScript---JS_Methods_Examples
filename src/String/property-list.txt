@@ -1,0 +1,82 @@
+at
+charAt
+charCodeAt
+codePointAt
+concat
+endsWith
+includes
+indexOf
+lastIndexOf
+normalize
+padEnd
+padStart
+repeat
+replace
+replaceAll
+search
+slice
+split
+startsWith
+substring
+
+
+
+toLowerCase
+toUpperCase
+toString
+trim
+trimEnd
+trimStart
+valueOf
+
+constructor
+fromCharCode
+fromCodePoint
+length
+name
+
+
+
+deprecated:
+-----------
+anchor
+big
+blink
+bold
+fixed
+fontcolor
+fontsize
+italics
+link
+small
+strike
+sub
+substr
+sup
+trimLeft
+trimRight
+
+True or False
+-------------
+startsWith
+endsWith
+includes
+
+
+Need to check 
+-------------
+at vs charAt
+charCodeAt vs codePointAt
+match vs search
+toString vs valueOf
+
+Check it laster
+---------------
+localeCompare
+match
+matchAll
+toLocaleLowerCase
+toLocaleUpperCase
+valueOf
+
+
