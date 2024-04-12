@@ -96,10 +96,11 @@ describe('Array', () => {
   //     - default deep val as 1
   test('flat', () => {
     let arr1 = [0, 1, 2, [3, 4]];
+    let arr1Copy = [0, 1, 2, [3, 4]];
     let arr2 = [0, 1, 2, [[[3, 4]]]];
 
     expect(arr1.flat()).toEqual([0, 1, 2, 3, 4]);
-    expect(arr1).toEqual(arr1);
+    expect(arr1).toEqual(arr1Copy);
     expect(arr2.flat(2)).toEqual([0, 1, 2, [3, 4]]);
     expect(arr2.flat(Infinity)).toEqual([0, 1, 2, 3, 4]);
 
