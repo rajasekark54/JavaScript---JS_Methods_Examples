@@ -125,7 +125,8 @@ describe('match', () => {
   // should pul regex inside the quote
   test('1', () => {
     const string = 'The quick brown fox jumps over the lazy dog. It barked.';
-    const str2 = 'My grandfather is 65 years old and My grandmother is 63 years old.';
+    const str2 =
+      'My grandfather is 65 years old and My grandmother is 63 years old.';
 
     const regex = /[A-Z]/g;
     const found = string.match(regex);
@@ -347,27 +348,3 @@ describe('trim', () => {
     expect('   Hello World    '.trimRight()).toEqual('   Hello World');
   });
 });
-
-// describe('', () => {
-//   test.only('', () => {
-
-//   })
-// })
-
-// describe('', () => {
-//   test.only('', () => {
-
-//   })
-// })
-
-// describe('', () => {
-//   test.only('', () => {
-
-//   })
-// })
-
-// describe('', () => {
-//   test.only('', () => {
-
-//   })
-// })

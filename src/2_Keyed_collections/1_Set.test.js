@@ -23,5 +23,7 @@ describe('Set', () => {
 
     set.delete(3);
     expect(set.has(3)).toEqual(false);
+
+    expect([...set]).toEqual([1, { a: 1 }, { a: 1 }]);
   });
 });

@@ -242,27 +242,3 @@ describe('getPrototypeOf', () => {
     expect(Object.getPrototypeOf(obj1)).toEqual(prototype1);
   });
 });
-
-// describe('', () => {
-//   test('', () => {});
-// });
-
-// describe('', () => {
-//   test('', () => {});
-// });
-
-// describe('', () => {
-//   test('', () => {});
-// });
-
-// describe('', () => {
-//   test('', () => {});
-// });
-
-// describe('', () => {
-//   test('', () => {});
-// });
-
-// describe('', () => {
-//   test('', () => {});
-// });
