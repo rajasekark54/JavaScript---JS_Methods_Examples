@@ -1,5 +1,5 @@
-describe("Array", () => {
-  test("at", () => {
+describe('Array', () => {
+  test('at', () => {
     const arr = [5, 12, 8, 130, 44];
 
     expect(arr.at(1)).toEqual(12);
@@ -8,15 +8,15 @@ describe("Array", () => {
     expect(arr[-2]).toEqual(undefined);
   });
 
-  test("cancat", () => {
-    const letters = ["a", "b", "c"];
+  test('cancat', () => {
+    const letters = ['a', 'b', 'c'];
     const numbers = [1, 2, 3];
 
     let arr = letters.concat(numbers);
     let arr1 = [...letters, ...numbers];
 
-    expect(arr).toEqual(["a", "b", "c", 1, 2, 3]);
-    expect(arr1).toEqual(["a", "b", "c", 1, 2, 3]);
+    expect(arr).toEqual(['a', 'b', 'c', 1, 2, 3]);
+    expect(arr1).toEqual(['a', 'b', 'c', 1, 2, 3]);
     expect(letters).toEqual(letters);
 
     const num1 = [1, 2, 3];
@@ -29,7 +29,7 @@ describe("Array", () => {
 
   // every element in the array should pass the test
   // arguments - element, index, array
-  test("every", () => {
+  test('every', () => {
     const array1 = [1, 30, 39, 29, 10, 13];
     res1 = array1.every((x, index, array) => x < 40);
 
@@ -39,7 +39,7 @@ describe("Array", () => {
   // The fill() method changes all elements in an array to a static value
   // arguments - value, startfrom, uptoEnd
   // overwrite an original array;
-  test("fill", () => {
+  test('fill', () => {
     const arr = [1, 2, 3, 4];
 
     expect(arr.fill(1, 1, 3)).toEqual([1, 1, 1, 4]);
@@ -49,7 +49,7 @@ describe("Array", () => {
   });
 
   // shallow copy of a portion of a given array or group of elm passes the ondition
-  test("filter", () => {
+  test('filter', () => {
     let filtered = [12, 5, 8, 130, 44];
     let res = filtered.filter((elm, index, array) => elm > 10);
 
@@ -58,7 +58,7 @@ describe("Array", () => {
   });
 
   // return the first statisfied elm
-  test("find", () => {
+  test('find', () => {
     let filtered = [5, 15, 8, 130, 44];
     let res = filtered.find((elm, index, array) => elm > 10);
 
@@ -66,7 +66,7 @@ describe("Array", () => {
     expect(filtered).toEqual(filtered);
   });
 
-  test("findIndex", () => {
+  test('findIndex', () => {
     let filtered = [5, 15, 8, 130, 44];
     let res = filtered.findIndex((elm, index, array) => elm > 10);
 
@@ -75,7 +75,7 @@ describe("Array", () => {
   });
 
   // return the first statisfied elm
-  test("findLast", () => {
+  test('findLast', () => {
     let filtered = [5, 15, 8, 130, 10];
     let res = filtered.findLast((elm, index, array) => elm > 10);
 
@@ -83,7 +83,7 @@ describe("Array", () => {
     expect(filtered).toEqual(filtered);
   });
 
-  test("findLastIndex", () => {
+  test('findLastIndex', () => {
     let filtered = [5, 15, 8, 130, 10];
     let res = filtered.findLastIndex((elm, index, array) => elm > 10);
 
@@ -94,7 +94,7 @@ describe("Array", () => {
   // flat - creates new array with all sub-array elm concatenated int it.
   // arg - deep (how deep sub array concatenated)
   //     - default deep val as 1
-  test("flat", () => {
+  test('flat', () => {
     let arr1 = [0, 1, 2, [3, 4]];
     let arr1Copy = [0, 1, 2, [3, 4]];
     let arr2 = [0, 1, 2, [[[3, 4]]]];
@@ -110,7 +110,7 @@ describe("Array", () => {
   });
 
   // It is identical to a map() followed by a flat()
-  test("map and flat", () => {
+  test('map and flat', () => {
     const arr = [1, 2, 3, 4];
 
     const arrMap = arr.map((x) => [x * 2]);
@@ -120,7 +120,7 @@ describe("Array", () => {
     expect(arrFlatMap).toEqual([2, 4, 6, 8]);
   });
 
-  test("includes", () => {
+  test('includes', () => {
     const arr = [1, 2, 3];
 
     expect(arr.includes(2)).toBe(true);
@@ -130,7 +130,7 @@ describe("Array", () => {
 
   //returns the first index at which a given element can be found in the array, or -1 if it is not present.
   // arg - searchElement, fromIndex
-  test("indexOf", () => {
+  test('indexOf', () => {
     const arr = [1, 2, 3];
 
     expect(arr.indexOf(2)).toBe(1);
@@ -140,7 +140,7 @@ describe("Array", () => {
     expect([2, 9, 9, 9].indexOf(9, 2)).toBe(2);
   });
 
-  test("lastIndexOf", () => {
+  test('lastIndexOf', () => {
     const arr = [1, 3, 2, 3];
 
     expect(arr.lastIndexOf(3)).toBe(3);
@@ -148,30 +148,30 @@ describe("Array", () => {
     expect([2, 9, 9, 9].indexOf(9, 2)).toBe(2);
   });
 
-  test("join", () => {
-    const arr = ["Fire", "Air", "Water"];
+  test('join', () => {
+    const arr = ['Fire', 'Air', 'Water'];
 
-    expect(arr.join()).toEqual("Fire,Air,Water");
-    expect(arr.join("")).toEqual("FireAirWater");
-    expect(arr.join("-")).toEqual("Fire-Air-Water");
+    expect(arr.join()).toEqual('Fire,Air,Water');
+    expect(arr.join('')).toEqual('FireAirWater');
+    expect(arr.join('-')).toEqual('Fire-Air-Water');
   });
 
-  test("length", () => {
-    const arr = ["Fire", "Air", "Water"];
+  test('length', () => {
+    const arr = ['Fire', 'Air', 'Water'];
 
     expect(arr.length).toEqual(3);
   });
 
-  test("push", () => {
-    const arr = ["Fire", "Air"];
-    const arr1 = ["Fire"];
-    arr1.push("Air");
+  test('push', () => {
+    const arr = ['Fire', 'Air'];
+    const arr1 = ['Fire'];
+    arr1.push('Air');
 
     expect(arr1).toMatchObject(arr);
   });
 
-  test("pop", () => {
-    const arr1 = ["Fire", "Air"];
+  test('pop', () => {
+    const arr1 = ['Fire', 'Air'];
     arr1.pop();
     arr1.pop();
 
@@ -180,7 +180,7 @@ describe("Array", () => {
 
   // if we not pass as initial value, it will take first index val
   // return single value
-  test("reduce", () => {
+  test('reduce', () => {
     const array = [1, 2, 3];
 
     let res1 = array.reduce((p, c) => p + c, 2);
@@ -204,7 +204,7 @@ describe("Array", () => {
 
   // similar to reduce
   // iterate from right to left
-  test("reduceRight", () => {
+  test('reduceRight', () => {
     const array = [1, 2, 3];
 
     let res1 = array.reduceRight((p, c) => p + c, 2);
@@ -226,24 +226,24 @@ describe("Array", () => {
     console.log(res1);
   });
 
-  test("reverse", () => {
+  test('reverse', () => {
     const array = [1, 2, 3];
     expect(array.reverse()).toMatchObject([3, 2, 1]);
   });
 
-  test("unshift", () => {
+  test('unshift', () => {
     const array = [1, 2, 3];
     array.unshift(0);
     expect(array).toMatchObject([0, 1, 2, 3]);
   });
 
-  test("shift", () => {
+  test('shift', () => {
     const array = [1, 2, 3];
     array.shift();
     expect(array).toMatchObject([2, 3]);
   });
 
-  test("slice", () => {
+  test('slice', () => {
     const array = [1, 2, 3, 4, 5];
     const arr2 = array.slice(1);
     const arr3 = array.slice(1, 2);
@@ -263,7 +263,7 @@ describe("Array", () => {
   });
 
   // atleast one element passes the condition
-  test("some", () => {
+  test('some', () => {
     const array = [1, 2, 3, 4, 5];
     let res1 = array.some((elm, index, arr) => elm > 4);
     expect(res1).toBe(true);
